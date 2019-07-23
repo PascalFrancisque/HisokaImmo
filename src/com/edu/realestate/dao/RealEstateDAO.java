@@ -4,4 +4,5 @@ import com.edu.realestate.model.RealEstate;
 
 public interface RealEstateDAO extends AbstractDAO<RealEstate> {
 
+	RealEstate read(Integer id);
 }
