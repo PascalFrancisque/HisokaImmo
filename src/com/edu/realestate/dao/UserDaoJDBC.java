@@ -14,7 +14,6 @@ public class UserDaoJDBC extends AbstractDaoJDBC implements UserDAO {
 	@Override
 	public void create(User t) {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
@@ -75,6 +74,11 @@ public class UserDaoJDBC extends AbstractDaoJDBC implements UserDAO {
 		return reponse;
 
 		}
+
+	@Override
+	public void disconnect(User u) {
+		// TODO Auto-generated method stub
+	}
 	
 	}
 	

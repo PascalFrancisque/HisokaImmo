@@ -9,5 +9,8 @@ public interface UserDAO extends AbstractDAO<User> {
 	
 	User authenticate(String username, String password)
 			throws AuthenticationException; 
+	
+	void create(User t);
 
+	void disconnect(User u);
 }

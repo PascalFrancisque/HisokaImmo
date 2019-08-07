@@ -19,7 +19,6 @@ public class CityDaoES implements CityDAO {
 	@Override
 	public void create(City t) {
 		clientProvider.getClient();
-
 	}
 
 	@Override

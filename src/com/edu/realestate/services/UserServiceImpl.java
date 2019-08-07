@@ -10,17 +10,15 @@ import com.edu.realestate.model.User;
 public class UserServiceImpl implements UserService {
 	
 	UserDAO userDao;
-
+	
 	@Override
 	public void register(Advertiser adv) {
-		// TODO Auto-generated method stub
-
+		userDao.create(adv);
 	}
 
 	@Override
 	public void register(Moderator mod) {
-		// TODO Auto-generated method stub
-
+		userDao.create(mod);
 	}
 
 	@Override
@@ -30,8 +28,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public void disconnect(User u) {
-		// TODO Auto-generated method stub
-
+		userDao.disconnect(u);
 	}
 
 }
