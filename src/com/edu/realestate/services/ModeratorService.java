@@ -8,11 +8,9 @@ import com.edu.realestate.model.Advertisement;
 
 public interface ModeratorService {
 
-	void validateAdvertisement(int adId);
+	void validateAdvertisement(Integer adId);
 	
-	void refuseAdvertisement(int adId, String refusedComment);
+	void refuseAdvertisement(Integer adId, String refusedComment);
 
 	List<Advertisement> findAdvertisementsByStatus(AdStatus status) throws RealEstateException;
-
-	List<Advertisement> findPendingAdvertisements(AdStatus status) throws RealEstateException;
 }

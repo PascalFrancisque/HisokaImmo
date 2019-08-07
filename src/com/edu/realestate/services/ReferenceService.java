@@ -11,7 +11,7 @@ public interface ReferenceService {
 	
 	List<City> listCities();
 	
-	List<City> findCitiesByName(String input) throws RealEstateException;
+	List<City> findCitiesByName(String city) throws RealEstateException;
 	
 	List<Advertisement> findAdsByCriteria(SearchCriteria criteria) throws RealEstateException;
 

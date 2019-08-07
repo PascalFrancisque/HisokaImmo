@@ -1,14 +1,21 @@
 package com.edu.realestate.model;
 
-public class SearchCriteria {
+import java.io.Serializable;
+
+public class SearchCriteria implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	
 	private int cityId;
-	private String query;
-	private String type;
-	private int priceMin;
-	private int priceMax;
-	private int areaMin;
-	private int areaMax;
+	private String query; /// where description like %query% or title like %query%
+	private String type;  // TransactionType
+	private int priceMin; // A exclure si 0 ou aberrant  
+	private int priceMax; // A exclure si 0 ou aberrant  
+	private int areaMin;  // A exclure si 0 ou aberrant  
+	private int areaMax;  // A exclure si 0 ou aberrant  
 	private double longitude;
 	private double latitude;
 	private int distance;

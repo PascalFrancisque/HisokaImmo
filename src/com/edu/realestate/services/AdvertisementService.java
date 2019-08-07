@@ -12,15 +12,17 @@ public interface AdvertisementService {
 	
 	List<Advertisement> findAdvertisementByStatus(AdStatus status) throws RealEstateException;
 	
-	Advertisement findAdvertisementById(String id) throws RealEstateException;
+	Advertisement findAdvertisementById(Integer id) throws RealEstateException;
 	
 	void placeAdvertisement(Advertisement ad) throws RealEstateException;
 	
-	List<Picture> findPicturesbybAdId(int aid) throws RealEstateException;
+	List<Picture> findPicturesbybAdId(Integer aid) throws RealEstateException;
 	
 	List<Advertisement> findLatestAds() throws RealEstateException;
 	
 	List<Advertisement> findBestAds() throws RealEstateException;
 	
-	List<Advertisement> findAdvertisement(City city);
+	List<Advertisement> findAdvertisement(City city) throws RealEstateException;
+
+	
 }

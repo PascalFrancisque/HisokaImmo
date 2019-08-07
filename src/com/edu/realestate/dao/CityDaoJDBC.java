@@ -1,6 +1,7 @@
 package com.edu.realestate.dao;
 
 import java.sql.ResultSet;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -74,6 +75,12 @@ public class CityDaoJDBC extends AbstractDaoJDBC implements CityDAO {
 			e.printStackTrace();
 		}
 		return cities;
+	}
+
+	@Override
+	public List<City> findCitiesByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

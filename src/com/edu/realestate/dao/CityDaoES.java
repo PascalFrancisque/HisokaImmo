@@ -46,4 +46,10 @@ public class CityDaoES implements CityDAO {
 		return null;
 	}
 
+	@Override
+	public List<City> findCitiesByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

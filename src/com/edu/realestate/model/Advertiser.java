@@ -41,9 +41,10 @@ public class Advertiser extends User {
 
 	@Override
 	public String toString() {
-		return "Advertiser [title=" + title + ", firstName=" + firstName + ", lastName=" + lastName + ", phone=" + phone
-				+ "]";
+		return "Advertiser [" + super.toString() +"]";
 	}
+	
+	
 	
 	
 	
