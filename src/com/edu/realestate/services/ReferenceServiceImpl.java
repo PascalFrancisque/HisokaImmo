@@ -34,4 +34,10 @@ public class ReferenceServiceImpl implements ReferenceService {
 		return searchDao.search(criteria);
 	}
 
+	@Override
+	public void addCity(City city) {
+		cityDao.create(city);
+		
+	}
+
 }

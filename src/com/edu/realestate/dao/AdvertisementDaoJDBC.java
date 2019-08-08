@@ -69,4 +69,16 @@ public class AdvertisementDaoJDBC extends AbstractDaoJDBC implements Advertiseme
 		return null;
 	}
 
+	@Override
+	public List<Advertisement> readFavAds(String owner) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Advertisement> readMyAds(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

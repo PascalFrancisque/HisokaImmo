@@ -1,8 +1,7 @@
 package com.edu.realestate.dao;
 
 import java.util.List;
-
-import org.elasticsearch.index.query.QueryBuilders;
+//import org.elasticsearch.index.query.QueryBuilders;
 
 import com.edu.realestate.model.City;
 

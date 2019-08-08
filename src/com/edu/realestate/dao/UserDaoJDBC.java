@@ -79,6 +79,12 @@ public class UserDaoJDBC extends AbstractDaoJDBC implements UserDAO {
 	public void disconnect(User u) {
 		// TODO Auto-generated method stub
 	}
+
+	@Override
+	public void delete(String username) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	}
 	

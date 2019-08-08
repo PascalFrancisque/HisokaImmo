@@ -29,4 +29,8 @@ public interface AdvertisementDAO extends AbstractDAO<Advertisement> {
 
 	public List<Advertisement> readAllStatus(AdStatus status);
 
+	public List<Advertisement> readFavAds(String owner);
+
+	public List<Advertisement> readMyAds(String username);
+
 }

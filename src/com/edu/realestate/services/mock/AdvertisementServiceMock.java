@@ -33,7 +33,7 @@ public class AdvertisementServiceMock implements AdvertisementService {
 
 	
 	@Override
-	public void placeAdvertisement(Advertisement ad) throws RealEstateException {
+	public void placeAdvertisement(Advertisement ad) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -61,6 +61,36 @@ public class AdvertisementServiceMock implements AdvertisementService {
 	public List<Picture> findPicturesbybAdId(Integer aid) throws RealEstateException {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void updateAdvertisement(Advertisement ad) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAdvertisement(Integer aid) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Advertisement> findFavAds(String owner) throws RealEstateException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Advertisement> findMyAds(String username) throws RealEstateException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void favoriteAd(Integer aid) throws RealEstateException {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

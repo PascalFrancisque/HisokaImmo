@@ -1,7 +1,5 @@
 package com.edu.realestate.services;
 
-import java.util.Random;
-
 import com.edu.realestate.model.*;
 
 

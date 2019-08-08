@@ -1,6 +1,7 @@
 package com.edu.realestate.dao;
 
 import com.edu.realestate.exceptions.AuthenticationException;
+
 import com.edu.realestate.model.User;
 
 public interface UserDAO extends AbstractDAO<User> {
@@ -13,4 +14,6 @@ public interface UserDAO extends AbstractDAO<User> {
 	void create(User t);
 
 	void disconnect(User u);
+	
+	void delete(String username);
 }

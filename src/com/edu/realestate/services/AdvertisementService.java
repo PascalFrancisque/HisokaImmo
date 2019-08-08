@@ -14,7 +14,11 @@ public interface AdvertisementService {
 	
 	Advertisement findAdvertisementById(Integer id) throws RealEstateException;
 	
-	void placeAdvertisement(Advertisement ad) throws RealEstateException;
+	void placeAdvertisement(Advertisement ad);
+	
+	void updateAdvertisement(Advertisement ad);
+	
+	void deleteAdvertisement(Integer aid);
 	
 	List<Picture> findPicturesbybAdId(Integer aid) throws RealEstateException;
 	
@@ -23,6 +27,12 @@ public interface AdvertisementService {
 	List<Advertisement> findBestAds() throws RealEstateException;
 	
 	List<Advertisement> findAdvertisement(City city) throws RealEstateException;
-
+	
+	List<Advertisement> findFavAds(String owner) throws RealEstateException;
+	
+	List<Advertisement> findMyAds (String username) throws RealEstateException;
+	
+	void favoriteAd (Integer aid) throws RealEstateException;
+	
 	
 }

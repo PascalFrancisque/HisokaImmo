@@ -35,4 +35,10 @@ public class ReferenceServiceMock implements ReferenceService {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public void addCity(City city) {
+		// TODO Auto-generated method stub
+		
+	}
 }

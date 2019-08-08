@@ -20,6 +20,23 @@ public class UserServiceImpl implements UserService {
 	public void register(Moderator mod) {
 		userDao.create(mod);
 	}
+	
+	@Override
+	public void updateAccount(Advertiser adv) {
+		userDao.update(adv);
+	}
+
+	@Override
+	public void updateAccount(Moderator mod) {
+		userDao.update(mod);
+	}
+
+	@Override
+	public void deleteAccount(String username) {
+		userDao.delete(username);
+		
+	}
+
 
 	@Override
 	public User authenticate(String login, String password) throws AuthenticationException {
@@ -31,4 +48,5 @@ public class UserServiceImpl implements UserService {
 		userDao.disconnect(u);
 	}
 
+	
 }

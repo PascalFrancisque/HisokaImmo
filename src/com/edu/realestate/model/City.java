@@ -1,6 +1,6 @@
 package com.edu.realestate.model;
 
-public class City implements Comparable {
+public class City implements Comparable<Object> {
 	
 	private int id;
 	private String name; 

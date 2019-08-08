@@ -12,6 +12,12 @@ public interface UserService {
 	
 	void register (Moderator mod); 
 	
+	void updateAccount (Advertiser adv); 
+	
+	void updateAccount (Moderator mod); 
+	
+	void deleteAccount (String username);
+	
 	User authenticate(String login, String password) throws AuthenticationException ;
 	
 	void disconnect(User u);

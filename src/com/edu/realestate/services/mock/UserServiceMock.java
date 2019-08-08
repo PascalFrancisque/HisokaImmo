@@ -52,5 +52,23 @@ public class UserServiceMock implements UserService {
 		
 	}
 
+	@Override
+	public void updateAccount(Advertiser adv) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateAccount(Moderator mod) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAccount(String username) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 }
