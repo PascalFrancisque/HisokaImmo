@@ -33,7 +33,7 @@ public class CityDaoES implements CityDAO {
 	}
 
 	@Override
-	public void delete(Integer id) {
+	public void delete(City t) {
 		// TODO Auto-generated method stub
 
 	}

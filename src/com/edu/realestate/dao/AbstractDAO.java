@@ -8,6 +8,6 @@ public interface AbstractDAO<T> {
 
 	void update(T t);
 
-	void delete(Integer id);
+	void delete(T t);
 
 }

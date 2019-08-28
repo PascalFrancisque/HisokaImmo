@@ -1,6 +1,7 @@
 package com.edu.realestate.dao;
 
 import java.sql.ResultSet;
+
 import java.sql.Statement;
 
 import com.edu.realestate.mapping.RealEstateMapper;
@@ -23,7 +24,7 @@ public class RealEstateDaoJDBC extends AbstractDaoJDBC implements RealEstateDAO 
 	}
 
 	@Override
-	public void delete(Integer id) {
+	public void delete(RealEstate t) {
 		// TODO Auto-generated method stub
 
 	}

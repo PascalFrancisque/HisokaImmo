@@ -1,7 +1,16 @@
 package com.edu.realestate.model;
 
+import javax.persistence.Entity;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class City implements Comparable<Object> {
 	
+	@Id 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name; 
 	private int postCode;
@@ -10,10 +19,9 @@ public class City implements Comparable<Object> {
 	
 	
 	
-	public City() {
-		super();
-	}
+	public City() {}
 
+	
 	public City(int id, String name, int postCode) {
 		super();
 		this.id = id;

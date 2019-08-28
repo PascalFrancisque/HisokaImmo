@@ -1,19 +1,47 @@
 package com.edu.realestate.model;
 
+import javax.persistence.Column;
+import javax.persistence.Convert;
+import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
+
+import com.edu.realestate.convert.BooleanToStringConverter;
+
+@Entity @PrimaryKeyJoinColumn(name="id")
 public class Apartment extends RealEstate {
 	
 	
-	private int rooms;
+	private Integer rooms;
 	private String floor;
+	
+	@Column(name = "energy_level")
 	private String energyLevel;
+	
+	@Column(name = "gas_level")
 	private String gasLevel;
+	
+	@Convert(converter=BooleanToStringConverter.class)
 	private boolean elevator;
+	
+	@Convert(converter=BooleanToStringConverter.class)
 	private boolean intercom;
+	
+	@Convert(converter=BooleanToStringConverter.class)
 	private boolean balcony;
+	
+	@Convert(converter=BooleanToStringConverter.class)
 	private boolean terrace;
+	
+	@Convert(converter=BooleanToStringConverter.class)
 	private boolean garage;
+	
+	@Convert(converter=BooleanToStringConverter.class)
 	private boolean parking;
+	
+	@Convert(converter=BooleanToStringConverter.class)
 	private boolean alarm;
+	
+	@Convert(converter=BooleanToStringConverter.class)
 	private boolean digicode;
 
 

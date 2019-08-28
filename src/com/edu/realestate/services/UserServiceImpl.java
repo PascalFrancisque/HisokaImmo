@@ -1,15 +1,21 @@
 package com.edu.realestate.services;
 
+import org.springframework.stereotype.Service;
+
+import org.springframework.transaction.annotation.Transactional;
+
 import com.edu.realestate.dao.UserDAO;
+import com.edu.realestate.dao.UserDaoHib;
 import com.edu.realestate.exceptions.AuthenticationException;
 import com.edu.realestate.model.Advertiser;
 import com.edu.realestate.model.Moderator;
 import com.edu.realestate.model.User;
 
-
+@Service
+@Transactional
 public class UserServiceImpl implements UserService {
 	
-	UserDAO userDao;
+	UserDAO userDao = new UserDaoHib();
 	
 	@Override
 	public void register(Advertiser adv) {
@@ -32,8 +38,8 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public void deleteAccount(String username) {
-		userDao.delete(username);
+	public void deleteAccount(User t) {
+		userDao.delete(t);
 		
 	}
 

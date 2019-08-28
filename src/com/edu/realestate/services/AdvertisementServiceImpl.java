@@ -2,17 +2,23 @@ package com.edu.realestate.services;
 
 import java.util.List;
 
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.edu.realestate.dao.AdvertisementDAO;
-import com.edu.realestate.dao.AdvertisementDaoJDBC;
+import com.edu.realestate.dao.AdvertisementDaoHib;
 import com.edu.realestate.exceptions.RealEstateException;
 import com.edu.realestate.model.AdStatus;
 import com.edu.realestate.model.Advertisement;
 import com.edu.realestate.model.City;
 import com.edu.realestate.model.Picture;
 
+@Service
+@Transactional
 public class AdvertisementServiceImpl implements AdvertisementService {
 	
-	private AdvertisementDAO advertisementDAO = new AdvertisementDaoJDBC();
+	private AdvertisementDAO advertisementDAO = new AdvertisementDaoHib();
 	
 	@Override
 	public void placeAdvertisement(Advertisement ad) {
@@ -25,8 +31,8 @@ public class AdvertisementServiceImpl implements AdvertisementService {
 	}
 
 	@Override
-	public void deleteAdvertisement(Integer aid) {
-		advertisementDAO.delete(aid);
+	public void deleteAdvertisement(Advertisement ad) {
+		advertisementDAO.delete(ad);
 	}
 	
 	@Override
@@ -49,8 +55,8 @@ public class AdvertisementServiceImpl implements AdvertisementService {
 	}
 
 	@Override
-	public List<Advertisement> findLatestAds() throws RealEstateException {
-	List<Advertisement> latestAds = advertisementDAO.latestAds();
+	public List<Advertisement> findLatestAds(Integer nbAds) throws RealEstateException {
+	List<Advertisement> latestAds = advertisementDAO.latestAds(nbAds);
 		return latestAds;
 	}
 
@@ -81,6 +87,14 @@ public class AdvertisementServiceImpl implements AdvertisementService {
 	@Override
 	public void favoriteAd(Integer aid) throws RealEstateException {
 		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public Picture findPicturebyId(Integer id) throws RealEstateException {
+		Picture picture = advertisementDAO.readOnePicbyId(id);
+		System.out.println(picture.getId());
+		return picture; 
+		
 	}
 
 

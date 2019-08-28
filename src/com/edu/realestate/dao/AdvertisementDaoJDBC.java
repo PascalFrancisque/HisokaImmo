@@ -2,9 +2,15 @@ package com.edu.realestate.dao;
 
 import java.util.List;
 
+
+import javax.management.Query;
+
+import org.hibernate.Session;
+
 import com.edu.realestate.model.AdStatus;
 import com.edu.realestate.model.Advertisement;
 import com.edu.realestate.model.City;
+import com.edu.realestate.model.Picture;
 
 
 public class AdvertisementDaoJDBC extends AbstractDaoJDBC implements AdvertisementDAO {
@@ -22,7 +28,7 @@ public class AdvertisementDaoJDBC extends AbstractDaoJDBC implements Advertiseme
 	}
 
 	@Override
-	public void delete(Integer id) {
+	public void delete(Advertisement t) {
 		// TODO Auto-generated method stub
 
 	}
@@ -46,7 +52,7 @@ public class AdvertisementDaoJDBC extends AbstractDaoJDBC implements Advertiseme
 	
 
 	@Override
-	public List<Advertisement> latestAds() {
+	public List<Advertisement> latestAds(int nbAds) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -80,5 +86,12 @@ public class AdvertisementDaoJDBC extends AbstractDaoJDBC implements Advertiseme
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public Picture readOnePicbyId(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }

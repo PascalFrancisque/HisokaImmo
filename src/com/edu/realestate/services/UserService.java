@@ -16,10 +16,10 @@ public interface UserService {
 	
 	void updateAccount (Moderator mod); 
 	
-	void deleteAccount (String username);
+	void deleteAccount (User t);
 	
 	User authenticate(String login, String password) throws AuthenticationException ;
 	
-	void disconnect(User u);
+	void disconnect(User t);
 
 }

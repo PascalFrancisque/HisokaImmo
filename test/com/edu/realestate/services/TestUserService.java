@@ -3,6 +3,7 @@ package com.edu.realestate.services;
 import java.util.List;
 
 import com.edu.realestate.exceptions.AuthenticationException;
+import com.edu.realestate.exceptions.RealEstateException;
 import com.edu.realestate.model.Advertisement;
 import com.edu.realestate.model.Advertiser;
 import com.edu.realestate.model.City;
@@ -16,7 +17,7 @@ import com.edu.realestate.services.mock.UserServiceMock;
 
 public class TestUserService {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws RealEstateException {
 		UserService userService = new UserServiceMock();
 		
 		Moderator m = new Moderator ();

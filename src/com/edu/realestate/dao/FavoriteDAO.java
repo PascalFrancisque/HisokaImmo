@@ -10,6 +10,6 @@ public interface FavoriteDAO extends AbstractDAO<Favorite> {
 
 	void update(Favorite t);
 
-	void delete(Integer id);
+	void delete(Favorite t);
 
 }

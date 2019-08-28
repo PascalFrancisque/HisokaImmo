@@ -18,11 +18,13 @@ public interface AdvertisementService {
 	
 	void updateAdvertisement(Advertisement ad);
 	
-	void deleteAdvertisement(Integer aid);
+	void deleteAdvertisement(Advertisement ad);
 	
 	List<Picture> findPicturesbybAdId(Integer aid) throws RealEstateException;
 	
-	List<Advertisement> findLatestAds() throws RealEstateException;
+	Picture findPicturebyId(Integer id) throws RealEstateException;
+	
+	List<Advertisement> findLatestAds(Integer nbAds) throws RealEstateException;
 	
 	List<Advertisement> findBestAds() throws RealEstateException;
 	

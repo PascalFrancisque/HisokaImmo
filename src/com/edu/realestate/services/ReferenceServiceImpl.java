@@ -2,19 +2,25 @@ package com.edu.realestate.services;
 
 import java.util.List;
 
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.edu.realestate.dao.CityDAO;
-import com.edu.realestate.dao.CityDaoJDBC;
+import com.edu.realestate.dao.CityDaoHib;
 import com.edu.realestate.dao.SearchDAO;
-import com.edu.realestate.dao.SearchDaoJDBC;
+import com.edu.realestate.dao.SearchDaoHib;
 import com.edu.realestate.exceptions.RealEstateException;
 import com.edu.realestate.model.Advertisement;
 import com.edu.realestate.model.City;
 import com.edu.realestate.model.SearchCriteria;
 
+@Service
+@Transactional
 public class ReferenceServiceImpl implements ReferenceService {
 
-	SearchDAO searchDao = new SearchDaoJDBC();
-	CityDAO cityDao = new CityDaoJDBC();
+	SearchDAO searchDao = new SearchDaoHib();
+	CityDAO cityDao = new CityDaoHib();
 	
 	
 	@Override

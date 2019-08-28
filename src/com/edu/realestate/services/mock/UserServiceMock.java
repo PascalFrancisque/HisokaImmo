@@ -64,8 +64,9 @@ public class UserServiceMock implements UserService {
 		
 	}
 
+
 	@Override
-	public void deleteAccount(String username) {
+	public void deleteAccount(User t) {
 		// TODO Auto-generated method stub
 		
 	}

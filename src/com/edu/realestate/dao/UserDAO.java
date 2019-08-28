@@ -13,7 +13,7 @@ public interface UserDAO extends AbstractDAO<User> {
 	
 	void create(User t);
 
-	void disconnect(User u);
+	void disconnect(User t);
 	
-	void delete(String username);
+	void delete(User t);
 }

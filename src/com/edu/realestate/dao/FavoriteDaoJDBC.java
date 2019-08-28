@@ -23,7 +23,7 @@ public class FavoriteDaoJDBC extends AbstractDaoJDBC implements FavoriteDAO {
 	}
 
 	@Override
-	public void delete(Integer id) {
+	public void delete(Favorite t) {
 		// TODO Auto-generated method stub
 
 	}

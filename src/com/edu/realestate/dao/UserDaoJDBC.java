@@ -2,7 +2,6 @@ package com.edu.realestate.dao;
 
 import java.sql.ResultSet;
 
-
 import java.sql.Statement;
 
 import com.edu.realestate.exceptions.AuthenticationException;
@@ -29,23 +28,17 @@ public class UserDaoJDBC extends AbstractDaoJDBC implements UserDAO {
 	}
 
 	@Override
-	public void delete(Integer id) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public User read(String username) {
-		
+
 		User reponse = null;
 
 		try {
 			Statement st = getConnection().createStatement();
-			String sql = "SELECT * from user_data WHERE username ='"+ username +"'";
+			String sql = "SELECT * from user_data WHERE username ='" + username + "'";
 			ResultSet rs = st.executeQuery(sql);
 
 			if (rs.next()) {
-				reponse = UserMapper.resultToUser(rs); 
+				reponse = UserMapper.resultToUser(rs);
 			}
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -54,37 +47,36 @@ public class UserDaoJDBC extends AbstractDaoJDBC implements UserDAO {
 		return reponse;
 	}
 
-	
 	@Override
 	public User authenticate(String username, String password) throws AuthenticationException {
-		
-		User reponse = null; 
+
+		User reponse = null;
 		try {
-			String sql =
-					"SELECT * from user_data where username = '" + username + "' AND password = '" + password + "'"; 
+			String sql = "SELECT * from user_data where username = '" + username + "' AND password = '" + password
+					+ "'";
 			Statement stmt = getConnection().createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
-			
-			if (!rs.next()) throw new AuthenticationException();
-			reponse = UserMapper.resultToUser(rs); 
-			
-		}catch (Exception e) {
+
+			if (!rs.next())
+				throw new AuthenticationException();
+			reponse = UserMapper.resultToUser(rs);
+
+		} catch (Exception e) {
 			throw new AuthenticationException(" Problème de connection");
 		}
 		return reponse;
 
-		}
+	}
 
 	@Override
-	public void disconnect(User u) {
+	public void disconnect(User t) {
 		// TODO Auto-generated method stub
 	}
 
 	@Override
-	public void delete(String username) {
+	public void delete(User t) {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
-	}
-	
+
+}

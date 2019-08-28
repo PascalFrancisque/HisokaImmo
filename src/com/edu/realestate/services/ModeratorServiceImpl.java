@@ -2,20 +2,27 @@ package com.edu.realestate.services;
 
 import java.util.List;
 
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.edu.realestate.dao.AdvertisementDAO;
-import com.edu.realestate.dao.AdvertisementDaoJDBC;
+import com.edu.realestate.dao.AdvertisementDaoHib;
 import com.edu.realestate.dao.UserDAO;
-import com.edu.realestate.dao.UserDaoJDBC;
+import com.edu.realestate.dao.UserDaoHib;
 import com.edu.realestate.exceptions.RealEstateException;
 import com.edu.realestate.model.AdStatus;
 import com.edu.realestate.model.Advertisement;
 import com.edu.realestate.model.Advertiser;
 import com.edu.realestate.model.Moderator;
+import com.edu.realestate.model.User;
 
+@Service
+@Transactional
 public class ModeratorServiceImpl implements ModeratorService {
 
-	AdvertisementDAO advertisementDAO = new AdvertisementDaoJDBC();
-	UserDAO userDAO = new UserDaoJDBC(); 
+	AdvertisementDAO advertisementDAO = new AdvertisementDaoHib();
+	UserDAO userDAO = new UserDaoHib(); 
 	
 	@Override
 	public void validateAdvertisement(Integer adId) {
@@ -49,18 +56,17 @@ public class ModeratorServiceImpl implements ModeratorService {
 	@Override
 	public void updateUser(Moderator mod) {
 		userDAO.update(mod);
+	}
+
+	@Override
+	public void deleteUser(User t) {
+		userDAO.delete(t);
 		
 	}
 
 	@Override
-	public void deleteUser(String username) {
-		userDAO.delete(username);
-		
-	}
-
-	@Override
-	public void deleteAdvertisement(Integer aid) throws RealEstateException {
-		advertisementDAO.delete(aid);
+	public void deleteAdvertisement(Advertisement ad) throws RealEstateException {
+		advertisementDAO.delete(ad);
 		
 	}
 

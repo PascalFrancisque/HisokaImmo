@@ -27,11 +27,11 @@ public class TestJDBC {
 
 		CityDAO cdao = new CityDaoJDBC();
 		List<City> cities = cdao.listAll();
-//		System.out.println(cities);
+		System.out.println(cities);
 		
 		UserDAO udao = new UserDaoJDBC();
 		User u = udao.read("pascalFR");
-//		System.out.println(u);
+		System.out.println(u);
 		
 		SearchCriteria criteria = new SearchCriteria();
 		criteria.setCityId(30480);

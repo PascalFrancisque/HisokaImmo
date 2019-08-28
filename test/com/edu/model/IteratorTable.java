@@ -2,7 +2,7 @@ package com.edu.model;
 
 import java.util.Iterator;
 
-public class IteratorTable implements Iterator {
+public class IteratorTable implements Iterator<Object> {
 	
 	String[] tab;
 	int index; 

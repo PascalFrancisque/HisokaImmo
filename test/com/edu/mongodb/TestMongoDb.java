@@ -1,14 +1,14 @@
 package com.edu.mongodb;
 
 import com.mongodb.BasicDBObject;
-import com.mongodb.DB;
-import com.mongodb.DBCollection;
-import com.mongodb.DBCursor;
-import com.mongodb.MongoClient;
+
+//import com.mongodb.DB;
+//import com.mongodb.DBCollection;
+//import com.mongodb.DBCursor;
+//import com.mongodb.MongoClient;
 
 public class TestMongoDb {
 
-	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		
 		BasicDBObject searchQuery = new BasicDBObject();
