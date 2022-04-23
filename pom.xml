@@ -22,7 +22,7 @@
 
 
 	<properties>
-		<springframework.version>5.0.0.RELEASE</springframework.version>
+		<springframework.version>5.3.19</springframework.version>
 	</properties>
 
 	<dependencies>
